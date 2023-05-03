@@ -30,7 +30,7 @@ function Cards() {
   const toast = useToast();
   useEffect(() => {
     axios
-      .get("http://localhost:3322/card/all", {
+      .get("https://online-shop-mbej-p9jt.onrender.com/card/all", {
         headers: {
           authorization: "Bearer " + localStorage.getItem("token"),
         },
@@ -42,7 +42,7 @@ function Cards() {
 
   const totalPrice = () => {
     axios
-      .get("http://localhost:3322/card/total", {
+      .get("https://online-shop-mbej-p9jt.onrender.com/card/total", {
         headers: {
           authorization: "Bearer " + localStorage.getItem("token"),
         },
@@ -56,11 +56,14 @@ function Cards() {
   }, [total]);
   totalPrice();
   const deleteCard = (id: any) => {
-    axios.delete(`http://localhost:3322/card/delete/${id}`, {
-      headers: {
-        authorization: "Bearer " + localStorage.getItem("token"),
-      },
-    });
+    axios.delete(
+      `https://online-shop-mbej-p9jt.onrender.com/card/delete/${id}`,
+      {
+        headers: {
+          authorization: "Bearer " + localStorage.getItem("token"),
+        },
+      }
+    );
     setAllCard(allCard.filter((e: any) => e._id !== id));
     CardLength();
     totalPrice();
@@ -70,7 +73,7 @@ function Cards() {
     try {
       axios
         .post(
-          `http://localhost:3322/order`,
+          `https://online-shop-mbej-p9jt.onrender.com/order`,
           { total: total },
           {
             headers: {

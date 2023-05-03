@@ -26,7 +26,7 @@ function NavBar(props: any) {
   };
   React.useEffect(() => {
     axios
-      .get("http://localhost:3322/user", {
+      .get("https://online-shop-mbej-p9jt.onrender.com/user", {
         headers: {
           authorization: "Bearer " + localStorage.getItem("token"),
         },

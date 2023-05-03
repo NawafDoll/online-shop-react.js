@@ -19,7 +19,7 @@ function AddProduct() {
 
   const AddProduct = () => {
     axios.post(
-      "http://localhost:3322/product/create",
+      "https://online-shop-mbej-p9jt.onrender.com/product/create",
       {
         name: product.name,
         image: product.image,

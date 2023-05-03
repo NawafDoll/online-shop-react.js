@@ -32,7 +32,7 @@ function ProductInf() {
   });
   const productFun = useCallback(() => {
     return axios
-      .get(`http://localhost:3322/product/${_id}`, {
+      .get(`https://online-shop-mbej-p9jt.onrender.com/product/${_id}`, {
         headers: {
           "Content-Type": "application/json; charset=utf-8",
           authorization: "Bearer" + localStorage.getItem("token"),

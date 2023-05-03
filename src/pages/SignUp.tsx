@@ -30,11 +30,14 @@ function SignUp() {
 
   const postData = async () => {
     try {
-      const requist = await axios.post(`http://localhost:3322/user`, {
-        name: name,
-        email: email,
-        password: password,
-      });
+      const requist = await axios.post(
+        `https://online-shop-mbej-p9jt.onrender.com/user`,
+        {
+          name: name,
+          email: email,
+          password: password,
+        }
+      );
       toast({
         colorScheme: "pink",
         position: "top",

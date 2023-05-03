@@ -14,7 +14,7 @@ function PageOrder() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3322/order", {
+      .get("https://online-shop-mbej-p9jt.onrender.com/order", {
         headers: { authorization: "Bearer " + localStorage.getItem("token") },
       })
       .then((res) => {

@@ -43,7 +43,7 @@ function Home() {
   ) => {
     try {
       const requist = await axios.post(
-        `http://localhost:3322/card`,
+        `https://online-shop-mbej-p9jt.onrender.com/card`,
         {
           name: name,
           price: price,
@@ -73,11 +73,14 @@ function Home() {
   };
   const showProduct = useCallback(() => {
     axios
-      .get(`http://localhost:3322/product?category=${val}`, {
-        headers: {
-          authorization: "Bearer " + localStorage.getItem("token"),
-        },
-      })
+      .get(
+        `https://online-shop-mbej-p9jt.onrender.com/product?category=${val}`,
+        {
+          headers: {
+            authorization: "Bearer " + localStorage.getItem("token"),
+          },
+        }
+      )
       .then((res) => {
         setAllProducts(res.data);
       })
