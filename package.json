@@ -51,7 +51,7 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:3322",
+  "proxy": "https://online-shop-mbej-p9jt.onrender.com",
   "devDependencies": {
     "@types/js-cookie": "^3.0.3"
   }
