@@ -19,7 +19,7 @@ function ForgetPassword() {
   async function checkEmail(): Promise<void> {
     try {
       const req = await axios.post(
-        `http://localhost:3322/user/forgetpassword`,
+        `https://online-shop-mbej-p9jt.onrender.com/user/forgetpassword`,
         { email: email }
       );
       idAndtoken(req.data.resetPass);
