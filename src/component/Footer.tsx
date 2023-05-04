@@ -1,4 +1,4 @@
-import { Box, Divider, Text, VStack } from "@chakra-ui/react";
+import { Box, Divider, Text } from "@chakra-ui/react";
 import React from "react";
 import "../component/app.css";
 import "./app.css";
@@ -35,11 +35,11 @@ function Footer() {
             <i className="fa fa-twitter" aria-hidden="true"></i>
           </a>
         </li>
-        <li>
+        {/* <li>
           <a>
             <i className="fa fa-google-plus-g" aria-hidden="true"></i>
           </a>
-        </li>
+        </li> */}
         <li>
           <a>
             <i className="fa fa-linkedin" aria-hidden="true"></i>

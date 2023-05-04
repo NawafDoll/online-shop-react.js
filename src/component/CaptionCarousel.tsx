@@ -62,7 +62,7 @@ export default function CaptionCarousel() {
 
   return (
     <Box
-      mt={"25px"}
+      mt={"15px"}
       mb={"10px"}
       position={"relative"}
       height={"425px"}
