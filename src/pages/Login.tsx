@@ -28,10 +28,13 @@ function Login() {
 
   const handlerLogin = async () => {
     try {
-      const requist = await axios.post("http://localhost:3322/user/login", {
-        email: email,
-        password: password,
-      });
+      const requist = await axios.post(
+        "https://online-shop-mbej-p9jt.onrender.com/user/login",
+        {
+          email: email,
+          password: password,
+        }
+      );
       console.log(requist);
       localStorage.setItem("token", requist.data.token);
       // alert(requist.data.message);
