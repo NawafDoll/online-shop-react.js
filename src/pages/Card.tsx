@@ -140,7 +140,12 @@ function Cards() {
               <Divider width={"100%"} />
               <HStack mt={"5"} justify={"space-between"}>
                 <Image w={"10"} src={product.image} />
-                <Text overflowWrap={"normal"} w={"9"} h={"9"} lineHeight={"4"}>
+                <Text
+                  overflowWrap={"normal"}
+                  w={"10%"}
+                  h={"9"}
+                  lineHeight={"4"}
+                >
                   {product.name}
                 </Text>
                 <Text color={"blue"} width={"10"}>
