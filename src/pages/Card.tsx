@@ -142,9 +142,10 @@ function Cards() {
                 <Image w={"10"} src={product.image} />
                 <Text
                   overflowWrap={"normal"}
-                  w={"10%"}
+                  w={"9"}
                   h={"9"}
                   lineHeight={"4"}
+                  fontSize={"xs"}
                 >
                   {product.name}
                 </Text>
