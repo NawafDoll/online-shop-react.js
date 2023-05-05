@@ -24,17 +24,17 @@ function NavBar(props: any) {
     navigate("/login");
     window.location.reload();
   };
-  React.useEffect(() => {
-    axios
-      .get("https://online-shop-mbej-p9jt.onrender.com/user", {
-        headers: {
-          authorization: "Bearer " + localStorage.getItem("token"),
-        },
-      })
-      .then((res) => {
-        setAdmin(res.data.isAdmin);
-      });
-  });
+  // React.useEffect(() => {
+  //   axios
+  //     .get("https://online-shop-mbej-p9jt.onrender.com/user", {
+  //       headers: {
+  //         authorization: "Bearer " + localStorage.getItem("token"),
+  //       },
+  //     })
+  //     .then((res) => {
+  //       setAdmin(res.data.isAdmin);
+  //     });
+  // });
 
   return (
     <Box shadow={"dark-lg"}>
