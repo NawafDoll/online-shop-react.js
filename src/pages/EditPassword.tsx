@@ -22,9 +22,12 @@ function EditPassword() {
   const handlerEditPassword = () => {
     try {
       axios
-        .post(`http://localhost:3322/user/forgetpassword/${id}/${token}`, {
-          password: password,
-        })
+        .post(
+          `https://online-shop-mbej-p9jt.onrender.com/user/forgetpassword/${id}/${token}`,
+          {
+            password: password,
+          }
+        )
         .then((res) => {
           toast({
             colorScheme: "pink",
