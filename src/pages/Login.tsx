@@ -35,7 +35,7 @@ function Login() {
           password: password,
         }
       );
-      console.log(requist);
+
       localStorage.setItem("token", requist.data.token);
       // alert(requist.data.message);
 
@@ -49,7 +49,7 @@ function Login() {
       });
       if (requist.data.message.includes("Welcome")) {
         navigate("/");
-        window.location.reload();
+        // window.location.reload();
       }
     } catch (Error: any) {
       console.log(Error.response);

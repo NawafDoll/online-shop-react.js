@@ -19,10 +19,10 @@ function NavBar(props: any) {
   const navigate = useNavigate();
   const [admin, setAdmin] = React.useState(false);
   const { isOpen, onToggle } = useDisclosure();
-  const logOut = () => {
+  const logout = () => {
     localStorage.clear();
     navigate("/login");
-    window.location.reload();
+    // window.location.reload();
   };
   // React.useEffect(() => {
   //   axios
@@ -100,29 +100,7 @@ function NavBar(props: any) {
           <Text className="btn-22">About</Text>
           {!admin && <Text className="btn-22">Contact</Text>}
         </Flex>
-        {props.logOuts ? (
-          <Stack
-            flex={{ base: 1, md: 0 }}
-            justify={"flex-end"}
-            direction={"row"}
-            spacing={6}
-          >
-            <Link to={"/login"}>
-              <Button
-                fontSize={"sm"}
-                fontWeight={600}
-                color={"white"}
-                bg={"pink.400"}
-                _hover={{
-                  bg: "pink.300",
-                }}
-                onClick={logOut}
-              >
-                LogOut
-              </Button>
-            </Link>
-          </Stack>
-        ) : (
+        {!localStorage.getItem("token") && (
           <Stack
             flex={{ base: 1, md: 0 }}
             justify={"flex-end"}
@@ -153,6 +131,29 @@ function NavBar(props: any) {
                 }}
               >
                 Sign Up
+              </Button>
+            </Link>
+          </Stack>
+        )}
+        {localStorage.getItem("token") && (
+          <Stack
+            flex={{ base: 1, md: 0 }}
+            justify={"flex-end"}
+            direction={"row"}
+            spacing={2}
+          >
+            <Link to={"/login"}>
+              <Button
+                fontSize={"sm"}
+                fontWeight={600}
+                color={"white"}
+                bg={"pink.400"}
+                _hover={{
+                  bg: "pink.300",
+                }}
+                onClick={logout}
+              >
+                Logout
               </Button>
             </Link>
           </Stack>

@@ -34,6 +34,7 @@ function Home() {
     { _id: "", name: "", image: "", price: 0, discription: "", category: "" },
   ]);
   const [amount, setMount] = useState<any>(0);
+
   const addCard = async (
     name: string,
     price: number,

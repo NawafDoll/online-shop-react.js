@@ -102,7 +102,6 @@ function Cards() {
           });
         });
     } catch (Error: any) {
-      console.log(Error.response);
       toast({
         colorScheme: "pink",
         position: "top",
