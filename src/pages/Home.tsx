@@ -42,8 +42,8 @@ function Home() {
     date: number,
     _id: string
   ) => {
-    try {
-      const requist = await axios.post(
+    await axios
+      .post(
         `https://online-shop-mbej-p9jt.onrender.com/card`,
         {
           name: name,
@@ -58,19 +58,21 @@ function Home() {
             authorization: "Bearer " + localStorage.getItem("token"),
           },
         }
-      );
-      toast({
-        colorScheme: "pink",
-        position: "top",
-        title: requist.data.message,
-        status: "success",
-        duration: 2000,
-        isClosable: true,
+      )
+      .then((res) => {
+        toast({
+          colorScheme: "pink",
+          position: "top",
+          title: res.data.message,
+          status: "success",
+          duration: 2000,
+          isClosable: true,
+        });
+        CardLength();
+      })
+      .catch((err) => {
+        console.log(err);
       });
-      CardLength();
-    } catch (Error) {
-      console.log(Error);
-    }
   };
   const showProduct = useCallback(() => {
     axios
