@@ -38,6 +38,7 @@ function Cards() {
       })
       .then((res) => {
         setAllCard(res.data.allCards);
+        Length(res.data.allCards.length);
       });
   }, []);
 
