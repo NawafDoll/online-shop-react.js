@@ -18,6 +18,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 import CaptionCarousel from "../component/CaptionCarousel";
 import CardLength from "../component/CardLength";
+import { Length, ini } from "../component/Length";
 // import "aos/aos.css";
 interface productData {
   _id: string;
@@ -68,7 +69,7 @@ function Home() {
           duration: 2000,
           isClosable: true,
         });
-        CardLength();
+        Length(ini + 1);
       })
       .catch((err) => {
         console.log(err);

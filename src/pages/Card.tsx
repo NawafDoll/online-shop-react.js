@@ -14,6 +14,7 @@ import {
 } from "@chakra-ui/react";
 import { DeleteIcon } from "@chakra-ui/icons";
 import CardLength from "../component/CardLength";
+import { Length, ini } from "../component/Length";
 interface data {
   image: string;
   name: string;
@@ -65,7 +66,8 @@ function Cards() {
       }
     );
     setAllCard(allCard.filter((e: any) => e._id !== id));
-    CardLength();
+    // CardLength();
+    Length(ini - 1);
     totalPrice();
   };
 
