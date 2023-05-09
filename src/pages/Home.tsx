@@ -111,11 +111,7 @@ function Home() {
                 className="fa fa-cart-arrow-down"
                 // style={{ fontSize: "30px" }}
               ></i>
-              <span className="length">
-                {!localStorage.getItem("length")
-                  ? 0
-                  : localStorage.getItem("length")}
-              </span>
+              <span className="length">{ini}</span>
             </Link>
           </li>
         </ul>
