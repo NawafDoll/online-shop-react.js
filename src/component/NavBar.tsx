@@ -186,14 +186,16 @@ function NavBar(props: any) {
             </Text>
           </Link>
           <hr></hr>
-          <Text
-            cursor={"pointer"}
-            p={1.5}
-            fontWeight={"medium"}
-            _hover={{ backgroundColor: "gray.200" }}
-          >
-            Orders
-          </Text>
+          <Link to={"/orders"}>
+            <Text
+              cursor={"pointer"}
+              p={1.5}
+              fontWeight={"medium"}
+              _hover={{ backgroundColor: "gray.200" }}
+            >
+              Orders
+            </Text>
+          </Link>
           <hr></hr>
           <Link to={"/card"}>
             <Text
@@ -212,7 +214,7 @@ function NavBar(props: any) {
             fontWeight={"medium"}
             _hover={{ backgroundColor: "gray.200" }}
           >
-            Add Products
+            About Us
           </Text>
           <hr></hr>
           <Text
@@ -221,7 +223,7 @@ function NavBar(props: any) {
             fontWeight={"medium"}
             _hover={{ backgroundColor: "gray.200" }}
           >
-            Manage Orders
+            Contact
           </Text>
           <hr></hr>
         </Stack>
