@@ -38,14 +38,6 @@ function SignUp() {
           password: password,
         }
       );
-      toast({
-        colorScheme: "pink",
-        position: "top",
-        title: requist.data.message,
-        status: "success",
-        duration: 3000,
-        isClosable: true,
-      });
       if (requist.data.message.includes("Welcome")) {
         navigate("/login");
       }

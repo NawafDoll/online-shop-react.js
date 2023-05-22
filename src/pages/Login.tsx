@@ -16,6 +16,7 @@ import { useState } from "react";
 import React from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import { error } from "console";
 
 function Login() {
   const toast = useToast();
@@ -37,30 +38,12 @@ function Login() {
       );
 
       localStorage.setItem("token", requist.data.token);
-      // alert(requist.data.message);
 
-      toast({
-        colorScheme: "pink",
-        position: "top",
-        title: requist.data.message,
-        status: "success",
-        duration: 4000,
-        isClosable: true,
-      });
-      if (requist.data.message.includes("Welcome")) {
+      if (requist.status === 200) {
         navigate("/");
-        // window.location.reload();
       }
     } catch (Error: any) {
-      console.log(Error.response);
-      toast({
-        colorScheme: "pink",
-        position: "top",
-        title: Error.response.data.message,
-        status: "error",
-        duration: 4000,
-        isClosable: false,
-      });
+      console.log(Error);
     }
   };
 
